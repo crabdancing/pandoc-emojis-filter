@@ -29,5 +29,6 @@
   "bugs": {
     "url": "https://github.com/masbicudo/Pandoc-Emojis-Filter/issues"
   },
-  "homepage": "https://github.com/masbicudo/Pandoc-Emojis-Filter#readme"
+  "homepage": "https://github.com/masbicudo/Pandoc-Emojis-Filter#readme",
+  "bin": "app.js"
 }
