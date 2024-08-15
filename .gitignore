@@ -1,5 +1,7 @@
 node_modules/
 /noto-emoji/
+/result
+**/result
 out.pdf
 output.md
 package-lock.json
