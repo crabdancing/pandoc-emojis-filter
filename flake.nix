@@ -2,7 +2,7 @@
   description = "Flake for building pandoc-emojis-filter";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstaable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
@@ -17,8 +17,11 @@
         pkgs,
         ...
       }: {
-        packages = {
-          defaultPackage = pkgs.callPackage ./pkg.nix {};
+        packages = let
+          pandoc-emojis-filter = pkgs.callPackage ./pkg.nix {};
+        in {
+          inherit pandoc-emojis-filter;
+          default = pandoc-emojis-filter;
         };
       };
     };
